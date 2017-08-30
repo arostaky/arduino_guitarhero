@@ -1,18 +1,5 @@
+//Juan Patricio Di Bacco
 /*
-This example demonstrates all features of the library.
-
- - The controller starts up in ANALOG mode, and is locked
- (user cannot switch modes using the ANALOG button)
-
- - SQUARE and CROSS buttons toggle between ANALOG and DIGITAL modes.
- also, at this point the lock is released.
-
- - CIRCLE button rotates the motor1 while pressed. This motor has
- a fixed rotation speed and its state is limited to on or off
-
- - While pressing TRIANGLE, motor2 rotates. Its rotation speed is
- controlled by the X-axis of the left analog stick.
-
  Pin layouts are hardcoded in GPSX.c.
  For function details, refer to documents attached to this library.
  */
@@ -39,7 +26,7 @@ int lastButtonStateO = 0;
 
 void setup()
 {
-  Serial.begin(9200);
+  Serial.begin(9600);
   PSX.mode(PSX_PAD1, MODE_ANALOG, MODE_LOCK);
 
   PSX.motorEnable(PSX_PAD1, MOTOR1_ENABLE, MOTOR2_ENABLE);
